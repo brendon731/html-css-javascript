@@ -12,6 +12,12 @@ window.setIframe = (element) => {
     let path = element.id
     iframe.src = `projects/${path}/${path}.html`
     
+    if(window.screen.availWidth < 512){
+        setTimeout(() => {
+            ul.classList.toggle("nav--hidden")
+        },500);
+    }
+    
 }
 
 const menu = document.querySelector("#menu")
