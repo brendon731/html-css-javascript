@@ -77,3 +77,8 @@ iframe{
 .nav--hidden ~ i{
     right:-47px;
 }
+@media (max-width:512px){
+    header{
+        position:absolute;
+    }
+}
