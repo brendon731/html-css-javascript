@@ -1,0 +1,74 @@
+body{
+    background-color:rgb(88, 68, 29);
+    display:flex;
+    height:100vh;
+}
+.container{
+    height:70px;
+    width:70px;
+    margin:auto;
+    display:flex;
+    flex-wrap:wrap;
+}
+.square1{
+    animation:init1 2s infinite;
+    animation-delay:.20s;
+    
+}
+.square2{
+    animation:init2 2s infinite;
+
+}
+.square3{
+    animation:init3 2s infinite;
+    animation-delay:.40s;
+
+}
+.square{
+    height:25px;
+    width:25px;
+    background-color:white;
+    margin:5px;
+    border-radius:100%;
+}
+
+@keyframes init1 {
+    
+    25%{
+        transform:translateX(calc(100% + 10px));
+    }
+    50%{
+        transform:translate(calc(100% + 10px), calc(100% + 10px));
+    }
+    75%{
+        transform:translateY(calc(100% + 10px));
+    }
+    
+    
+}
+@keyframes init2 {
+    
+    25%{
+        transform:translateY(calc(100% + 10px));
+    }
+    50%{
+        transform:translate(calc(-100% - 10px), calc(100% + 10px));
+    } 
+    75%{
+        transform:translateX(calc(-100% - 10px));
+    }
+    
+}
+@keyframes init3 {
+    
+    25%{
+        transform:translateY(calc(-100% - 10px));
+    }
+    50%{
+        transform:translate(calc(100% + 10px), calc(-100% - 10px));
+    }
+    75%{
+        transform:translateX(calc(100% + 10px));
+    }  
+       
+}

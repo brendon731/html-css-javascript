@@ -1,0 +1,85 @@
+body{
+    background-color:#1d1e22;
+    height:100vh;
+    display:flex;
+    align-items: center;
+    flex-direction: column;
+}
+h1{
+    color:grey;
+}
+.button{
+    display:inline-block;
+    margin:0 25px;
+    position:relative;
+    width:50px;
+    height:50px;
+
+}
+span{
+    height:50px;
+    width:50px;
+    transform:rotate(-25deg) skew(25deg);
+    position:absolute;
+    border-radius:10px;
+    color:white;
+    transition:.5s;
+    top:0;
+    
+}
+ul{
+    margin:auto;
+
+}
+ul li:nth-child(1) span{
+    background-color:blue;
+}
+ul li:nth-child(2) span{
+    background-color:rgb(50, 148, 214);
+}
+ul li:nth-child(3) span{
+    background-color:rgb(207, 22, 22);
+}
+ul li:nth-child(4) span{
+    background-color:rgb(51, 67, 206);
+}
+ul li:nth-child(5) span{
+    background-color:rgb(212, 0, 255);
+}
+.button span:last-child{
+    text-align:center;
+    line-height:50px;
+    font-size:24px;
+}
+
+.button span:nth-child(1){    
+    opacity:.5;
+    filter:grayscale(25%);
+}
+.button span:nth-child(2){    
+    opacity:.4;
+}
+.button span:nth-child(3){    
+    opacity:.6;
+}
+.button span:nth-child(4){    
+    opacity:.8;
+}
+.button span:nth-child(5){    
+    opacity:.9;
+}
+
+
+.button:hover span:nth-child(2){
+    top:-7px; 
+}
+.button:hover span:nth-child(3){
+    top:-14px;
+}
+.button:hover span:nth-child(4){
+    top:-21px;
+}
+.button:hover span:nth-child(5){
+    top:-28px;
+}
+

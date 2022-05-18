@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="dice.css">
+    <title>Dice</title>
+</head>
+<body>
+    <button>Row the dice</button>
+    <div class="content">
+        <div class="dice-container seconds">
+            <div class="part-1">
+                <span class="dot middle"></span>
+            </div>
+            <div class="part-2">
+                <span class="dot left-top"></span>
+                <span class="dot right-bottom"></span>
+            </div>
+            <div class="part-3">
+                <span class="dot left-top"></span>
+                <span class="dot middle"></span>
+                <span class="dot right-bottom"></span>
+            </div>
+            <div class="part-4">
+                <span class="dot left-top"></span>
+                <span class="dot left-bottom"></span>
+                <span class="dot right-top"></span>
+                <span class="dot right-bottom"></span>
+            </div>
+            <div class="part-5">
+                <span class="dot left-top"></span>
+                <span class="dot left-bottom"></span>
+                <span class="dot middle"></span>
+                <span class="dot right-top"></span>
+                <span class="dot right-bottom"></span>
+            </div>
+            <div class="part-6">
+                <span class="dot left-top"></span>
+                <span class="dot left-middle"></span>
+                <span class="dot left-bottom"></span>
+
+                <span class="dot right-top"></span>
+                <span class="dot right-middle"></span>
+                <span class="dot right-bottom"></span>
+
+            </div>
+            
+            
+
+        </div>
+                
+    </div>
+</body>
+<script>
+    
+    let btn = document.querySelectorAll("button")[0]
+
+    let cube = document.querySelectorAll(".dice-container")[0]
+    
+    function getRandomInt(min, max) {
+        min = Math.ceil(min);
+        max = Math.floor(max);
+        return Math.floor(Math.random() * (max - min)) + min;
+    }
+    function check(){
+        let n = getRandomInt(90, 361)
+        let a = n % 90
+        let turnsTimes = getRandomInt(4, 12)
+        return (n - a) * turnsTimes 
+    }
+    btn.onclick = e =>{
+        let r = check()
+        let r2 = check()
+        let r3 = check()
+
+        cube.style.transform = `rotateX(${r}deg) rotateY(${r2}deg) rotateZ(${r3}deg)`
+        cube.style.transition = "5s"
+    }
+      
+
+</script>
+</html>

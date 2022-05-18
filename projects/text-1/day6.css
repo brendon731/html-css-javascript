@@ -1,0 +1,82 @@
+body{
+    background-color:black;
+    height:100vh;
+    display:flex;
+}
+.container{
+    margin:auto;
+}
+.container span{
+    text-transform: uppercase;
+    font-size: 100px;
+    font-weight: bold;
+    color:rgba(190, 118, 181, 0.425);
+}
+.container span:nth-child(1){
+    animation:light 5s infinite;
+
+}
+.container span:nth-child(2){
+    animation:light 5s infinite;
+    animation-delay:.5s;
+    
+}
+.container span:nth-child(3){
+    animation:light 5s infinite;
+    animation-delay:1s;
+    
+}
+.container span:nth-child(4){
+    animation:light 5s infinite;
+    animation-delay:1.5s;
+    
+}
+.container span:nth-child(5){
+    animation:light 5s infinite;
+    animation-delay:2s;
+    
+}
+.container span:nth-child(6){
+    animation:light 5s infinite;
+    animation-delay:2.5s;
+    
+}
+.container span:nth-child(7){
+    animation:light 5s infinite;
+    animation-delay:3s;
+    
+}
+.container span:nth-child(8){
+    animation:light 5s infinite;
+    animation-delay:3.5s;
+    
+}
+.container span:nth-child(9){
+    animation:light 5s infinite;
+    animation-delay:4s;
+    
+}
+.container span:nth-child(10){
+    animation:light 5s infinite;
+    animation-delay:4.5s;
+    
+}
+@keyframes light{
+    0%{
+        color:rgba(190, 118, 181, 0.425);
+
+    }
+    5%{
+        color:rgb(247, 22, 191);
+        text-shadow: 1px 1px 5px rgb(221, 5, 192);
+    }
+    10%{
+        color:rgba(190, 118, 181, 0.425);
+        text-shadow: none;
+    }
+    100%{
+        color:rgba(190, 118, 181, 0.425);
+
+    }
+}
+

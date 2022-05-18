@@ -1,0 +1,29 @@
+body{
+    display:flex;
+    background-color:rgb(0, 0, 0);
+}
+.container{
+    font-family:Arial, Helvetica, sans-serif;
+    font-size:64px;
+    margin:auto;
+}
+h1{
+    background-image:url("matrix.jpg");
+    background-size:contain;
+    
+    
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+    
+    animation:go 2s infinite linear;
+}
+
+@keyframes go {
+    
+    100%{
+        background-position-y: 150px;
+
+    }
+    
+}

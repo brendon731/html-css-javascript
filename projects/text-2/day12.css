@@ -1,0 +1,37 @@
+body{
+    height:100vh;
+    display:flex;
+}
+.content{
+    margin:auto;
+}
+h1{
+    background-image:linear-gradient(rgb(73, 73, 131) 50%, white 50%);
+    position:relative;
+    font-size:64px;
+    font-family: Arial, Helvetica, sans-serif;
+    height:250px;
+    width:500px;
+
+    background-position-y:50px;
+    background-repeat:no-repeat;
+    
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+   
+    transition:1.5s;
+
+    text-align:center;
+    line-height:250px;
+    text-transform: uppercase;
+}
+h1:before{
+    content:"";
+    top:0;bottom:0;left:0;right:0;
+    background-color:rgb(98, 98, 209);
+    position:absolute;
+    z-index:-1;
+}
+h1:hover{
+    background-position-y:-50px;
+}

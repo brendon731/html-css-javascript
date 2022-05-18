@@ -1,0 +1,55 @@
+body{
+    padding:0;
+    margin:0;
+    background-color:rgb(64, 153, 255);
+    background-image: linear-gradient(rgb(64, 153, 255), rgb(169, 180, 192), rgb(6, 115, 240) );
+    background-repeat: no-repeat;
+
+    box-sizing:border-box;
+    height:100vh;
+    width:100vw;
+    overflow:hidden;
+    position:fixed;
+}
+.ocean{
+    height:calc(100vh + 500px);
+    width:calc(100vw + 500px);
+    background-size:calc(100% + 200px);
+    background-image:url("icons/sea-blue-sky.png");
+    background-repeat: no-repeat;
+    background-position-x:-500px;
+    background-position-y:-20vh;
+
+    display:flex;
+    animation:ocean 10s infinite linear;
+     
+}
+.boat{
+    width:250px;
+    height:200px;
+    
+
+    background-image:url("icons/ship-boat-illustration-vector.png");
+    background-repeat:no-repeat;
+    background-size:contain;
+    animation:1.5s boat alternate-reverse infinite;
+
+    position:absolute;
+    top:calc(50% - 50px);
+    left:calc(50% - 125px);
+}
+
+@keyframes ocean {
+    100%{
+        background-position-x: 0;
+    }
+}
+@keyframes boat {
+    0%{
+        transform:rotate(-3deg);
+    }
+    100%{
+        transform:rotate(3deg);
+        
+    }
+}

@@ -1,0 +1,40 @@
+
+body{
+    font-size:30px;
+    background-color:black;
+    height:100vh;
+    width:100vw;
+    margin:0;
+    padding:0;
+    overflow:hidden;
+    display:flex;
+}
+body:hover{
+    cursor:pointer;
+}
+div{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 3em;
+    font-weight: bolder;
+    text-transform: uppercase;
+    z-index:10;
+    position:absolute;
+    width:fit-content;
+    top:50%;
+    left:50%;
+    transform:translate(-50%, -50%);
+
+}
+p{
+    color:white;
+    margin:40%;
+    z-index:5;
+}
+span{
+    position:absolute;
+    width:1em;
+    height:1em;
+    border-radius:100%;
+    transition:30s;
+
+}

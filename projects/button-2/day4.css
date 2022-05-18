@@ -1,0 +1,58 @@
+body{
+    background-color:black;
+    display:flex;
+    height:100vh;
+
+}
+div{
+    margin:auto;
+}
+button{
+    color:rgb(33, 127, 182);
+    font-size: 16px;
+    text-transform: uppercase;
+    text-shadow: 1px 1px 5px grey;
+    padding:20px;
+    border:7px solid rgb(33, 127, 182);
+    position:relative;
+    background-color: rgba(153, 50, 204, 0);
+}
+button:hover{
+    cursor:pointer;
+}
+
+button:before{
+    content:"";
+    background-color:black;
+    height:10px;
+    width:10px;
+    position:absolute;
+    top:-10px;
+    left:20px;
+    transform:skew(45deg);
+    transition:1s;
+
+
+}
+button:after{
+    content:"";
+    background-color:black;
+    height:10px;
+    width:10px;
+    position:absolute;
+    bottom:-10px;
+    right:20px;
+    transform:skew(45deg);
+    transition:1s;
+
+}
+button:hover:before{
+    
+    left:calc(100% - 30px);
+    ;
+}
+button:hover:after{
+    
+    right:calc(100% - 30px);
+
+}

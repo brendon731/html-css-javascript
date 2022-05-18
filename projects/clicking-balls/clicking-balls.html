@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="cball.css">
+    <title>clicking ball</title>
+</head>
+<body>
+    <div>Praticando CSs</div>
+    <p>click anywhere</p>
+    <span></span>
+</body>
+<script>
+    const colors = ["grey", "blue", "yellow", "green", "red", "blueviolet", "white", "aqua"]
+    const body = document.querySelectorAll("body")[0]
+
+    function getRndInteger(min, max) {
+        return Math.floor(Math.random() * (max - min + 1) ) + min;
+    }
+    function getPosition(param){
+        let r = getRndInteger(-10,10)
+        if (r >= 0){
+            return (r + 1) * param
+        }else{
+            return r * param
+        }
+    }
+    body.onclick = e =>{
+        for(let i = 0;i<50 ; i++){
+            let span = document.createElement("span")
+            body.appendChild(span)
+
+            let x = getPosition(window.innerWidth)
+            let y = getPosition(window.innerHeight)
+    
+            span.style.left = `calc(${e.clientX}px - .5em)`
+            span.style.top = `calc(${e.clientY}px - .5em)`
+
+            let color = getRndInteger(0, colors.length)
+            span.style.backgroundColor = `${colors[color]}`
+            span.style.boxShadow = `1px 1px 20px ${colors[color]}`
+
+            setTimeout(() => {
+                span.style.transform = `translate(${x}px, ${y}px)`
+            
+            }, 1);
+        }
+
+    }
+</script>
+</html>

@@ -1,0 +1,99 @@
+body{
+    display:flex;
+    height:100vh;
+}
+section{
+    position:relative;
+    height:100vw;
+    max-height:450px;
+    width: 100%;
+    margin:auto;
+    max-width:450px;
+    line-height:1.5em;
+    letter-spacing: .05em;
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+
+}
+button{
+    padding:.5em 1em;
+    border:5px solid rgba(38, 140, 235, 0.247);
+    background-color:transparent;
+    font-size: 16px;
+    color:black;
+    border-radius: 250px;
+}
+div{
+    height:100vw;
+    max-height:450px;
+
+    width:100%;
+    max-width:450px;
+    position:absolute;
+
+    border:5px solid rgba(38, 140, 235, 0.247);
+    transition:.3s;
+
+    
+}
+
+div:nth-child(2){
+    animation:turn 5s infinite linear reverse;
+    border-top-left-radius: 200px;
+    border-top-right-radius: 150px;
+    border-bottom-left-radius: 110px;
+    border-bottom-right-radius: 150px;
+    
+
+
+}
+div:nth-child(3){
+    animation:turn 5s infinite linear;
+    border-top-left-radius: 200px;
+    border-top-right-radius: 150px;
+    border-bottom-left-radius: 110px;
+    border-bottom-right-radius: 150px;
+    transition:.5s;
+
+}
+div:nth-child(4){
+    animation:turn 4s infinite linear;
+    border-top-left-radius: 200px;
+    border-top-right-radius: 150px;
+    border-bottom-left-radius: 110px;
+    border-bottom-right-radius: 150px;
+    transition:.5s;
+}
+div:first-child{
+    z-index:1;
+    height:fit-content;
+
+    top:50%;
+    left:50%;
+    width:75%;
+    transform: translate(-50%, -50%);
+    border:none;
+    
+
+}
+section:hover .liquid {
+    background-color:rgb(38, 140, 235);
+    border:none;
+    z-index:10px;
+
+   
+} 
+section:hover, section:hover button{
+    color:white;
+}
+
+button:hover{
+    cursor:pointer;
+}
+
+@keyframes turn {
+    100%{
+        transform:rotate(360deg);
+    }
+    
+}

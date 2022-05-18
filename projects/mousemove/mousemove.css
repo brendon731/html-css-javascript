@@ -1,0 +1,37 @@
+body{
+    background-color:rgb(10, 10, 10);
+    overflow:hidden;
+}
+span{
+    position:absolute;
+    animation:fadeOut 1s infinite linear;
+}
+span:before{
+    content:"";
+    position:absolute;
+    background-image: url(heart.png);
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    height:100%;
+    width:100%;
+    animation:rotate 1s infinite linear;
+
+}
+@keyframes fadeOut {
+    0%, 100%{
+        opacity:0;
+    }
+    20%, 80%{
+        opacity:1;
+    }
+    
+}
+@keyframes rotate {
+    from{
+        transform:translate(0) rotate(0);
+    }
+    to{
+        transform:translate(300px) rotate(360deg);
+    }
+}

@@ -1,0 +1,76 @@
+body{
+    font-size:250px;
+    perspective: 5em;
+    perspective-origin:50% 50%;
+    background-color:black;
+    background-image: radial-gradient(circle at center, rgba(128, 128, 128, 0.322), black);
+    height:100vh;
+    padding:0;
+    margin:0;
+
+}
+section{
+    height:500px;
+    width:500px;
+    margin:auto;
+    position:relative;
+    transform-style: preserve-3d;
+    transform: rotateZ(45deg);
+
+    animation:turn 20s infinite alternate linear;
+
+}
+@keyframes turn {
+    100%{
+        transform:rotateY(1800deg) rotateX(1080deg) rotateZ(90deg);
+    }
+    
+}
+.face{
+    height:1em;
+    width:1em;
+    border:1px solid black;
+    display:flex;
+    flex-wrap: wrap;
+    position:absolute;
+    top:50%;
+    left:50%;
+    transform:translate(-50%, -50%);
+}
+
+span{
+    width:.3em;
+    flex-grow: 1;
+    border:3px solid black;
+}
+.face-red{
+    background-color:red;
+    transform:rotateX(90deg) translateZ(1em) translate(-50%, 0);
+
+}
+.face-orange{
+    background-color:rgb(255, 153, 0);
+    transform:rotateX(-90deg)  translate(-50%, 0);
+
+}
+.face-green{
+    background-color:green;
+    transform:rotateY(-90deg) translateZ(0em) translate(0, -50%);
+
+}
+.face-blue{
+    background-color:blue;
+    transform:rotateY(90deg) translateZ(-1em) translate(0, -50%) ;
+
+}
+.face-yellow{
+    background-color:rgb(255, 255, 0);
+    transform:translateZ(-.5em) translate(-50%, -50%) ;
+
+
+}
+.face-white{
+    background-color:white;
+    transform:translateZ(.5em) translate(-50%, -50%) ;
+
+}

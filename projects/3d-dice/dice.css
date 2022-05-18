@@ -1,0 +1,119 @@
+body{
+    font-size:150px ;
+    display:flex;
+    perspective: 5em;
+    height:100vh;
+    background-image: linear-gradient(rgb(0, 52, 100), rgb(0, 32, 61));
+}
+button{
+    height:fit-content;
+    position:absolute;
+    left:calc(50%);
+    transform:translate(-50%);
+    background-color: white;
+    padding:.5em 1em;
+    border:3px solid rgb(167, 167, 167);
+    color:black;
+    border-radius:10px;
+    cursor:pointer;
+    font-weight: bolder;
+}
+.content{
+    display:flex;
+    margin:auto;
+    transform-style:preserve-3d;    
+}
+
+.dice-container {
+    height:1em;
+    width:1em;
+    position:relative;
+    transform-style:preserve-3d;
+    
+}
+
+.dice-container div{
+    position:absolute;
+    height:1em;
+    width:1em;
+    top:calc(50% - .5em);
+    left:calc(50% - .5em);
+    
+    line-height: 1em;
+    text-align: center;
+    background-color:rgb(228, 228, 228);
+    box-shadow:1px 1px 20px rgba(0, 0, 0, 0.267) inset;
+    border-radius:5px;
+    
+}
+.dice-container .cover{
+    background-color:rgb(226, 226, 226);
+}
+.dice-container .cover:nth-child(7){
+    transform:rotateY(90deg);
+}
+.dice-container .cover:nth-child(8){
+    transform:rotateX(90deg);
+}
+
+.dot{
+    position:absolute;
+    height:30px;
+    width:30px;
+    background-color:rgb(83, 83, 83);
+    box-shadow: 5px 5px 5px black inset;
+    border-radius:100%;
+}
+.middle{
+    top:50%;
+    left:50%;
+    transform:translate(-50%, -50%);
+}
+.right-middle{
+    top:50%;
+    right:25%;
+    transform:translate(50%, -50%);
+}
+.left-middle{
+    top:50%;
+    left:25%;
+    transform:translate(-50%, -50%);
+}
+.left-top{
+    top:25%;
+    left:25%;
+    transform:translate(-50%, -50%);
+}
+.left-bottom{
+    bottom:25%;
+    left:25%;
+    transform:translate(-50%, 50%);
+}
+.right-top{
+    top:25%;
+    right:25%;
+    transform:translate(50%, -50%);
+}
+.right-bottom{
+    bottom:25%;
+    right:25%;
+    transform:translate(50%, 50%);
+}
+.part-1{
+    transform: translateZ(.5em);    
+}
+.part-2{
+    transform:rotateX(90deg) translateZ(.5em);
+}
+.part-3{
+    transform:rotateY(180deg) translateZ(.5em) rotateZ(180deg);
+    
+}.part-4{
+    transform:rotateX(-90deg) translateZ(.5em);
+}
+.part-5{
+    transform:rotateY(90deg) translateZ(.5em);
+}.part-6{
+    transform:rotateY(-90deg) translateZ(.5em);
+
+}

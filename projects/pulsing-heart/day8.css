@@ -1,0 +1,49 @@
+body{
+    background-color:black;
+}
+.heart{
+    position:relative;
+    margin-left:150px;
+    width:500px;
+    height:500px;
+}
+
+.part1, .part2{
+    height:350px;
+    width:200px;
+    background-color:red;
+    border-top-right-radius: 100px;
+    border-top-left-radius: 100px;
+    position:absolute;
+    bottom:0;
+}
+.part1{
+
+    transform:rotate(45deg) translate(75px, -75px);
+    animation:beat1 1s linear infinite;
+
+
+}
+.part2{
+    transform:rotate(-45deg);
+    border-bottom-right-radius: 10px;
+    animation:beat2 1s linear infinite;
+
+
+}
+
+@keyframes beat1 {
+    50%{
+        background-color:rgb(199, 57, 57);
+        transform:rotate(45deg) translate(90px, -90px) scale(1.2);
+    }
+    
+}
+@keyframes beat2 {
+    50%{
+        background-color:rgb(199, 57, 57);
+        transform:scale(1.2) rotate(-45deg);
+
+    }
+    
+}

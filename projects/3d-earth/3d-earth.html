@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    body{
+        display:flex;
+        height:100vh;
+        background-image:url("space.jpg");
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+    div{
+        height:250px;
+        width:250px;
+        margin:auto;
+        border-radius:100%;
+        background-image: url("mapa-nasa.jpg");
+        background-size: cover;
+        box-shadow: -10px -10px 50px black inset, 10px 10px 50px black inset;
+
+        animation:25s rotate infinite linear;
+    }
+    @keyframes rotate {
+        100%{
+            background-position: -1000px;
+        }
+        
+    }
+</style>
+<body>
+    <div>
+        
+    </div>
+</body>
+</html>

@@ -1,0 +1,99 @@
+body{
+    font-size:100px;
+    perspective: 10em;
+    perspective-origin: 50% 25px;
+    display:flex;
+    height:100vh;
+    background-image:radial-gradient(rgb(53, 53, 53), black) ;
+}
+.container{
+    position:relative;
+    height:1em;
+    width:1em;
+    margin:auto;
+    
+    transform-style: preserve-3d;
+    animation:turn 10s infinite linear;
+    
+}
+@keyframes turn {
+    100%{
+        transform:rotateY(360deg);
+    }
+    
+}
+.ball{
+    height:.5em;
+    width:.5em;
+    border-radius:100%;
+    
+    
+    background-image: radial-gradient(white,black);
+    position:absolute;
+    top:calc(50% - .25em);
+    left:calc(50% - .25em);
+    animation:turn 10s infinite reverse linear;
+}
+
+.box{
+    height:100px;
+    width:100px;
+    background-color:rgba(0, 87, 128, 0.349);
+    box-shadow:1px 1px 30px rgba(0, 0, 0, 0.548) inset;
+    border:1px solid rgba(0, 0, 0, 0.568);
+    position:absolute;
+    top:calc(50% - .5em);
+    left:calc(50% - .5em);
+    display:flex;
+
+}
+p{
+    font-size: 16px;
+    text-transform: uppercase;
+    margin:auto;
+
+}
+.box-1{
+    transform:translateZ(.5em);
+}
+.box-2{
+    transform:translateZ(-.5em) rotatey(180deg);
+}
+.box-3{
+    transform:rotateY(90deg) translateZ(.5em);
+}
+.box-4{
+    transform:rotateY(90deg) translateZ(-.5em);
+}
+.box-5{
+    transform:rotateX(90deg) translateZ(.5em);
+
+}
+.box-6{
+    transform:rotateX(90deg) translateZ(-.5em);
+}
+
+.container:hover .box-5{
+    transform-origin: 50% 0%;
+    transform:translateY(-1em)  translateZ(.5em);
+    animation:1s openbox linear ;
+    animation-fill-mode: forwards;
+
+}
+.container:hover .ball{   
+    animation:turn 10s infinite reverse linear , ball 1s  linear;
+    animation-fill-mode: forwards;
+        
+}
+@keyframes ball {
+    100%{
+        top:-1em;
+    }
+    
+}
+@keyframes openbox {
+    100%{
+        
+    }
+    
+}

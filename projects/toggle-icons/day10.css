@@ -1,0 +1,45 @@
+
+body{
+    background-color: darkgreen;
+    display:flex;
+    height:100vh;
+}
+.content-align{
+    margin:auto;
+}
+span{
+    font-size:64px;
+    color:white;
+    font-family: 'Fredericka the Great', cursive;
+    
+}
+.content-align span:after{
+    content:"";
+    display:inline-block;
+    margin-left:10px;
+    color:white;
+    height:54px;
+    width:54px;
+    background-image: url("icons/pc.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    -webkit-filter: invert(100%); /* Safari/Chrome */
+    filter: invert(100%);
+
+    animation:switch 2s infinite ;
+
+}
+@keyframes switch{
+    0%, 33%{
+        background-image: url("icons/pc.png");
+    }
+    34%, 66%{
+        background-image: url("icons/xicara.png");
+    }
+    67%, 99%{
+        background-image: url("icons/exercise.png");
+    }
+    
+    
+}

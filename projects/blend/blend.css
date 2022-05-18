@@ -1,0 +1,35 @@
+body{
+    height:100vh;
+    width:100vw;
+    margin:0;
+    overflow:hidden;
+    font-size:75px;
+}
+div{
+    height:100%;
+    width:100%;
+    position:absolute;
+}
+.bg{
+    background-image: url("../splash/bg.jpg");
+    background-size:cover;
+}
+span{
+    width:1em;
+    height:1em;
+    background-color:black;
+    position:absolute;
+    border-radius:100%;
+
+}
+.circle{
+    background-color: aliceblue;
+    mix-blend-mode:screen;
+}
+.cursor-follower{
+    width:1em;
+    height:1em;
+    border:1px solid black;
+    border-radius:100%;
+    position:absolute;
+}

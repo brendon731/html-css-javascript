@@ -1,0 +1,62 @@
+body{
+    height:70vh;
+    width:100vw;
+    background-color:rgb(240, 208, 166);
+}
+.suport{
+    background-color: black;
+    width:fit-content;
+    display:flex;
+    margin:auto;
+    height:50px;
+}
+span{
+    height:350px;
+    width:5px;
+    display:block;
+    margin:48px;
+    
+    box-shadow:5px 5px 20px black inset;
+    
+    transform-origin:10% 0%;
+    position:relative;
+}
+span:after{
+    content:"";
+    display:block;
+    
+    background-image: radial-gradient(white,black);
+
+    border-radius:100%;
+    width:100px;
+    height:100px;
+    position:absolute;
+    bottom:-100px;
+    left:-45px;
+}
+.suport span:first-child{
+    transform:rotate(45deg);
+    animation:firstPendulum 2s infinite linear;
+}
+.suport span:last-child{
+    animation:lastPendulum 2s infinite linear;
+    animation-delay: .5s;
+}
+
+@keyframes firstPendulum{
+    25%{
+        transform:rotate(0);
+    }
+    75%{
+        transform:rotate(0);
+    }
+}
+
+@keyframes lastPendulum {
+    25%{
+        transform:rotate(-45deg);
+    }
+    50%{
+        transform:rotate(0);
+    }
+}

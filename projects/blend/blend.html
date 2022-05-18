@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="blend.css">
+    <title>blend</title>
+</head>
+<body>
+    <div class="bg"></div>
+    <div class="circle">
+        <i class="cursor-follower"></i>    
+        </div>
+    
+</body>
+<script>
+    const body = document.querySelectorAll("body")[0]
+    const circle = document.querySelectorAll(".circle")[0]
+    const i = document.querySelectorAll(".cursor-follower")[0]
+
+    function setPosition(position, tag){
+        let x = position.clientX
+        let y = position.clientY
+        tag.style.left = `calc(${x}px - .5em)`
+        tag.style.top = `calc(${y}px - .5em)`
+    }
+
+    body.addEventListener("mousemove", (position)=>{
+        setPosition(position, i)
+    })
+    
+    function move(position){
+        let span = document.createElement("span")
+        setPosition(position, span)
+        circle.appendChild(span)
+    }
+    body.addEventListener("click", move)
+
+    body.addEventListener("mousedown", ()=>{
+        body.addEventListener("mousemove", move)
+    })
+    body.addEventListener("mouseup", ()=>{
+        body.removeEventListener("mousemove", move)
+    })
+    
+</script>
+</html>
