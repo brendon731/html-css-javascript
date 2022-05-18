@@ -14,7 +14,7 @@
        
     }
 
-    fetch("/projects",
+    fetch("projects",
         {headers:{ 
             'Accept': 'application/json'
         }}
